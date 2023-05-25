@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
   });
 
   router.get('/newPost', withAuth, (req, res) => {
-    res.render('/newPost');
+    res.render('newPost');
     
   });
 
