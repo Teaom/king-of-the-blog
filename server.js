@@ -44,3 +44,16 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+
+// TO DO LIST
+
+// 1. set up models 
+// 2. set up server 
+// 3. set up seed 
+// 4. set up views 
+// 5. set up html routes 
+// 6. set up api routes 
+// 7. set up js files for forms
+// 8. css styling
