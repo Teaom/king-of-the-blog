@@ -1,4 +1,3 @@
-
 const signupFormHandler = async (event) => {
     console.log("sign up");
     event.preventDefault();

@@ -1,4 +1,17 @@
 <div>
+
+    <nav>
+        <a href='/'>Home</a>
+        <a href='/dashboard'>Dashboard</a>
+        {{#if logged_in}}
+        <a href='/'>Logout</a>
+        {{/if}}
+        {{#unless logged_in}}
+        <a href="/login">Login</a>
+        {{/unless}}
+    </nav>
+
+    
     <h2>{{post.title}}</h2>
     <h3>{{post.body}}</h3>
 {{#if post.Comments}}
@@ -11,7 +24,7 @@
 <form id="comment-form">
     <h3>Make a Comment</h3>
     <h4>Body:</h4>
-    <input type="text" id="body-comment">
+    <textarea id="body-comment" style="height: 100px; width: 200px; resize: none;"></textarea>
     <input type="hidden" id="postId" value={{post.id}}>
     <button type="submit">Submit</button>
 </form>
