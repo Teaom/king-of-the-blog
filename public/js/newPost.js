@@ -3,8 +3,8 @@ const editPostFormHandler = async (event) => {
     console.log("posting");
   
     // Collect values from the login form
-    const title = document.querySelector('#title-posts').value.trim();
-    const body = document.querySelector('#body-posts').value.trim();
+    const title = document.querySelector('#title-post').value.trim();
+    const body = document.querySelector('#body-post')
   
     if (title && body) {
       // Send a POST request to the API endpoint
@@ -27,4 +27,4 @@ const editPostFormHandler = async (event) => {
   
   document
     .querySelector('#new-post-form')
-    .addEventListener('submit', loginFormHandler);
+    .addEventListener('submit', editPostFormHandler);

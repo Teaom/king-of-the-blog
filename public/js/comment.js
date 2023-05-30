@@ -1,5 +1,3 @@
-const { json } = require("sequelize");
-
 const commentFormHandler = async (event) => {
     event.preventDefault();
     console.log("commenting");

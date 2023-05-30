@@ -1,6 +1,7 @@
 const editPostFormHandler = async (event) => {
     event.preventDefault();
     console.log("commenting");
+    
     const title = document.querySelector('#title-edit-post').value.trim();
     const body = document.querySelector('#body-edit-post').value.trim();
     const postId = document.querySelector('#postId').value.trim();
@@ -27,7 +28,7 @@ const editPostFormHandler = async (event) => {
         console.log("yahoo");
         const postId = document.querySelector('#postId').value.trim();
         console.log(postId);
-        if (postID) {
+        if (postId) {
             const response = await fetch ('/api/posts/' + postId, {
                 method: 'DELETE',
                 body:JSON.stringify({postId}),
